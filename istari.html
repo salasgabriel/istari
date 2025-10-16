@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISTARI TATUAJES - PRÓXIMAMENTE</title>
+    <!-- Carga de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuración para usar la fuente Inter -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0d0f; /* Fondo muy oscuro, casi negro */
+        }
+        .text-shadow-glow {
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(138, 43, 226, 0.7); /* Sombra de texto mística */
+        }
+        .btn-magic {
+            background: linear-gradient(135deg, #8A2BE2 0%, #FFD700 100%); /* Gradiente Morado y Oro */
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(138, 43, 226, 0.4);
+        }
+        .btn-magic:hover {
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.6);
+            transform: translateY(-2px);
+        }
+    </style>
+    <!-- Iconos de Lucide (usamos un set de iconos para web) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+
+    <!-- Contenedor Principal (Centrado y con estilo místico) -->
+    <div class="w-full max-w-4xl bg-gray-900 border border-purple-800/50 rounded-2xl shadow-2xl p-6 md:p-10 text-white transform hover:shadow-purple-900/50 transition duration-500">
+
+        <!-- Sección de Portada Misteriosa -->
+        <header class="text-center mb-10">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-3 leading-tight text-shadow-glow text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-yellow-300">
+                La Magia y la Tinta
+            </h1>
+            <p class="text-2xl md:text-3xl font-light text-gray-300">...están llegando.</p>
+            <h2 class="text-xl md:text-2xl font-semibold mt-4 text-yellow-400">
+                ISTARI TATUAJES
+            </h2>
+        </header>
+
+        <!-- Cuenta Regresiva -->
+        <section class="text-center mb-12 p-4 bg-gray-800/70 rounded-xl border border-purple-700/30">
+            <h3 class="text-lg font-medium text-purple-300 mb-4">Gran Apertura en:</h3>
+            <div id="countdown" class="flex justify-center space-x-3 md:space-x-8">
+                <!-- Días -->
+                <div class="flex flex-col items-center p-2 bg-gray-900 rounded-lg shadow-lg">
+                    <span id="days" class="text-4xl md:text-6xl font-bold text-yellow-500">00</span>
+                    <span class="text-xs md:text-sm text-gray-400 mt-1">DÍAS</span>
+                </div>
+                <!-- Horas -->
+                <div class="flex flex-col items-center p-2 bg-gray-900 rounded-lg shadow-lg">
+                    <span id="hours" class="text-4xl md:text-6xl font-bold text-yellow-500">00</span>
+                    <span class="text-xs md:text-sm text-gray-400 mt-1">HORAS</span>
+                </div>
+                <!-- Minutos -->
+                <div class="flex flex-col items-center p-2 bg-gray-900 rounded-lg shadow-lg">
+                    <span id="minutes" class="text-4xl md:text-6xl font-bold text-yellow-500">00</span>
+                    <span class="text-xs md:text-sm text-gray-400 mt-1">MINUTOS</span>
+                </div>
+                <!-- Segundos -->
+                <div class="flex flex-col items-center p-2 bg-gray-900 rounded-lg shadow-lg hidden sm:flex">
+                    <span id="seconds" class="text-4xl md:text-6xl font-bold text-yellow-500">00</span>
+                    <span class="text-xs md:text-sm text-gray-400 mt-1">SEGUNDOS</span>
+                </div>
+            </div>
+            <p id="countdown-message" class="mt-4 text-xl font-semibold text-purple-400"></p>
+        </section>
+
+        <!-- Mensajes Misteriosos e Información -->
+        <section class="mb-10 space-y-6">
+            <p class="text-center text-xl italic text-gray-400">
+                "Pronto se revelarán los secretos de un nuevo arte, donde la piel se convierte en la protagonista."
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <!-- Servicio Tatuajes -->
+                <div class="p-4 bg-gray-800 rounded-xl border border-yellow-400/20">
+                    <i data-lucide="feather" class="w-8 h-8 mx-auto mb-2 text-yellow-400"></i>
+                    <h4 class="font-bold text-lg text-purple-300">TATUAJES</h4>
+                    <p class="text-sm text-gray-400">El arte definitivo en tu piel. Estilos únicos y personalizados.</p>
+                </div>
+                <!-- Servicio Piercings -->
+                <div class="p-4 bg-gray-800 rounded-xl border border-yellow-400/20">
+                    <i data-lucide="gem" class="w-8 h-8 mx-auto mb-2 text-yellow-400"></i>
+                    <h4 class="font-bold text-lg text-purple-300">PIERCINGS</h4>
+                    <p class="text-sm text-gray-400">Joyería de primera y manos expertas para la mejor experiencia.</p>
+                </div>
+                <!-- Servicio Manicura -->
+                <div class="p-4 bg-gray-800 rounded-xl border border-yellow-400/20">
+                    <i data-lucide="sparkles" class="w-8 h-8 mx-auto mb-2 text-yellow-400"></i>
+                    <h4 class="font-bold text-lg text-purple-300">MANICURA</h4>
+                    <p class="text-sm text-gray-400">Cuidado y diseño para complementar tu estilo mágico.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ubicación -->
+        <div class="text-center mb-10 p-4 bg-gray-800 rounded-xl">
+            <p class="text-lg md:text-xl font-semibold text-gray-200">
+                Próximamente en: <span class="text-purple-400">Local 14 de Paseo Sur.</span>
+            </p>
+        </div>
+
+        <!-- Call To Action (CTAs) - Botones -->
+        <div class="flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0 justify-center">
+
+            <!-- Botón de WhatsApp (Agenda tu cita) -->
+            <button onclick="goToWhatsapp()" class="btn-magic text-gray-900 font-bold py-3 px-6 rounded-full flex items-center justify-center text-center w-full md:w-auto">
+                <i data-lucide="calendar-check" class="w-5 h-5 mr-2"></i>
+                <span>Agenda tu cita y recibí descuentos especiales</span>
+            </button>
+
+            <!-- Botón de Instagram (Concurso) -->
+            <button onclick="goToInstagram()" class="bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-full flex items-center justify-center text-center w-full md:w-auto transition duration-300 shadow-md hover:shadow-lg">
+                <i data-lucide="instagram" class="w-5 h-5 mr-2"></i>
+                <span>Seguinos en IG y participa por premios únicos!</span>
+            </button>
+        </div>
+
+        <footer class="text-center mt-10 text-xs text-gray-600">
+            ISTARI TATUAJES | Paseo Sur, Local 14.
+        </footer>
+
+    </div>
+
+    <script>
+        // Inicializa los iconos de Lucide
+        lucide.createIcons();
+
+        // --- Lógica del Contador ---
+        
+        // La fecha límite es 2 de noviembre de 2025
+        const targetDate = new Date("November 02, 2025 00:00:00").getTime();
+        
+        const daysEl = document.getElementById('days');
+        const hoursEl = document.getElementById('hours');
+        const minutesEl = document.getElementById('minutes');
+        const secondsEl = document.getElementById('seconds');
+        const countdownMessage = document.getElementById('countdown-message');
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            // Cálculos de tiempo en días, horas, minutos y segundos
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            if (distance < 0) {
+                // Si la cuenta regresiva termina
+                clearInterval(countdownInterval);
+                daysEl.textContent = '00';
+                hoursEl.textContent = '00';
+                minutesEl.textContent = '00';
+                secondsEl.textContent = '00';
+                countdownMessage.textContent = '¡HEMOS INAUGURADO! La magia ya está aquí. ¡Agenda tu cita!';
+                countdownMessage.classList.remove('text-purple-400');
+                countdownMessage.classList.add('text-green-400');
+            } else {
+                // Actualizar elementos con formato de dos dígitos
+                daysEl.textContent = String(days).padStart(2, '0');
+                hoursEl.textContent = String(hours).padStart(2, '0');
+                minutesEl.textContent = String(minutes).padStart(2, '0');
+                secondsEl.textContent = String(seconds).padStart(2, '0');
+                countdownMessage.textContent = 'La espera está a punto de terminar...';
+            }
+        }
+
+        // Ejecutar la función inmediatamente y luego cada segundo
+        updateCountdown();
+        const countdownInterval = setInterval(updateCountdown, 1000);
+
+        // --- Lógica de Botones CTA ---
+
+        // Función para el botón de WhatsApp
+        function goToWhatsapp() {
+            const whatsappNumber = "5493624750888"; // El +54 y el 3624750888. Agrego el 9 para que sea un número de WhatsApp argentino válido.
+            const message = "Hola ISTARI TATUAJES, vengo del QR misterioso y quiero agendar mi cita y aprovechar los descuentos por inauguración!";
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Función para el botón de Instagram
+        function goToInstagram() {
+            const instagramUrl = "https://www.instagram.com/istaritatuajes";
+            window.open(instagramUrl, '_blank');
+        }
+
+    </script>
+</body>
+</html>
